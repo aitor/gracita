@@ -1,0 +1,9 @@
+# Feel free to use your Gmail account here! Can also
+# be any Jabber/XMPP account.
+username: test@adhearsion.com
+password: password
+enabled: false
+
+# Specify whether incoming subscription requests should
+# be automatically accepted.
+accept_subscriptions: false

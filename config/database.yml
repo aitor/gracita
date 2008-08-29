@@ -1,0 +1,12 @@
+# To use sqlite3, you'll need to have it installed. Try installing
+# it with your system's package manager.
+adapter: sqlite3 # can also be "sqlite" for sqlite v2
+dbfile: config/adhearsion.sqlite3
+
+#### If you want to use MySQL, use these settings instead:
+# adapter: mysql
+# host: localhost
+# database: adhearsion
+# username: root
+# password:
+# # socket: /var/run/mysqld/mysqld.sock # May not be required

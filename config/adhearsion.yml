@@ -1,0 +1,95 @@
+# HEY! FILL IN A CONTEXT! This should be a context in
+# your extensions.conf that points entirely to Adhearsion.
+# For example, this may be the context you include
+# the "exten => _X.,1,AGI(agi://192.168.1.3)" line in.
+context:
+# context: internal # Example
+
+# Since you probably want to handle your dialplans without
+# remembering to answer() and hangup() the call, Adhearsion
+# will automatically do this for you if you specify it here.
+answer_before_call: true
+hangup_after_call: true
+hangup_after_error: true
+
+# Do you want to use database.rb in your app? Enable this.
+enable_database: false
+
+# This is the host and port on which Adhearsion's AGI server
+# listens for incoming dial plan processing requests.
+host: 0.0.0.0
+port: 4573
+
+# This information is completely optional. It may be the
+# case that a particular helper you're using will need
+# information about your company. If this is the case,
+# it may be beneficial to fill in this information.
+#
+# info:
+#   name: Super Ultra Mega Corp
+#   main_number: 18005555555
+#   street_address: 123 Onetwothree Blvd
+#   city: Dallas
+#   state: Texas
+#   zip: 77777
+#   country: United States
+
+
+# If you wish to use named conferences in your dial plan,
+# uncomment the lines below. To use, pass the name to 
+# the join() method as a Symbol. e.g. join :management
+# 
+# conferences:
+#   management: 1000
+#   marketing: 1001
+#   development: 1002
+
+drb:
+  enabled: false
+  host: 127.0.0.1
+  port: 9050
+
+  deny: all
+  allow:
+   - 127.0.0.1
+   - 192.168.1.*
+
+manager:
+  host: 192.168.48.129
+  username: jicksta
+  password: pass
+  events: false
+
+  # Set your access control permissions above.
+  # Values for deny and allow can be several
+  # things:
+  #
+  #  * The 'all' keyword can be used to match
+  #    everything.
+  #  * A single IP can be given right after
+  #    the colon.
+  #  * A single IP with wildcards can be given
+  #  * Or, combining all of these, a YAML list
+  #    can be used to specify many policies.
+  #    See the comments below for more examples.
+  #
+  # Also note, the "host" field above may also
+  # affect the ability for DRb clients to connect
+  # to the server. If you wish you receive
+  # connections from the 192.168.1.*, listen on
+  # the IP associated with this machine on that
+  # subnet.
+  #
+  #
+  # USING YAML LISTS
+  #
+  # YAML allows lists of items to be created by
+  # prepending a hyphen to each list element.
+  # These lists can be used to refine your
+  # access control list better. Example:
+  #
+  # deny: all
+  # allow:
+  #   - 192.168.1.123
+  #   - 192.168.1.99
+  #   - 66.199.34.44

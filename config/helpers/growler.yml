@@ -1,0 +1,21 @@
+enabled: false
+
+# This is how growl identifies this client.
+app_name: Adhearsion
+
+# When dealing with only a single machine, set this
+# to your desktop's IP. If you want multiple servers,
+# you can manually pass the IP address as the second
+# argument to growl() and password as the third.
+
+# Leave ip empty if you intend to specify it manually
+ip: localhost
+password: # Leave as-is if none
+
+# This is a list of the different types of notifications
+# Growl should expect from this client. These can be
+# anything you want. Names are case sensitive. Note: At
+# least one must exist!
+notifications:
+  - Standard Notification
+  - Incoming Call

@@ -1,0 +1,8 @@
+enabled: false
+host: 192.168.1.2
+username: jicksta
+secret: jicksta
+events: false
+#port: 5038
+#console: 0
+#event_cache: 100

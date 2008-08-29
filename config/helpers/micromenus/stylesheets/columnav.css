@@ -1,0 +1,135 @@
+/*
+ * Copyright (c) 2007, David A. Lindquist (stringify.com)
+ * Some Rights Reserved
+ *
+ * This code is licensed under the Creative Commons Attribution 2.5 License
+ * (http://creativecommons.org/licenses/by/2.5/). Please maintain the above
+ * license and copyright statements when using this code.
+ *
+ * $Id: columnav.css 476 2007-02-20 23:43:22Z david $
+ */
+
+/* DO NOT CHANGE ANYTHING IN THIS SECTION
+
+   Styles below override defaults in carousel.css and govern fundamental layout
+   and behavior.
+
+------------------------------------------------------------------------------*/
+
+.carousel-component {
+    background: transparent;
+    color: black;
+    overflow: auto !important;
+    padding: 0;
+}
+
+.carousel-component ul.carousel-list li {
+    color: black;
+    font-family: inherit;
+    font-size: 1em;
+    text-align: left;
+}
+
+.carousel-component ul.carousel-list li div {
+    overflow: auto;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.carousel-component ul.carousel-list li a {
+    display: block;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.carousel-component ul.carousel-list li a span {
+    display: block;
+    position: relative;
+}
+
+
+/* CUSTOMIZE ANYTHING IN THIS SECTION
+
+   Styles below can be changed to customize colors, margins, padding, fonts,
+   etc., as well as the icons that appear before each item. At minimum, set the
+   width of .carousel-component and its list items, and the height of the div
+   it contains.
+
+------------------------------------------------------------------------------*/
+
+.carousel-component {
+}
+
+.carousel-component ul.carousel-list li {
+    width: 348px;
+}
+
+.carousel-component ul.carousel-list li div {
+    height: 348px;
+}
+
+.carousel-component ul.carousel-list li a {
+    color: black;
+    cursor: default;
+    font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin: 0 1px;
+    padding: 2px;
+    text-decoration: none;
+}
+
+.carousel-component ul.carousel-list li a.columnav-has-menu {
+    background-image: url(../images/arrow-off.gif);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.carousel-component ul.carousel-list li a.columnav-active {
+    background-color: #3875d7;
+}
+
+/* IE6 cannot grok element selectors with chained class names */
+html>body .carousel-component ul.carousel-list li a.columnav-has-menu.columnav-active {
+    background-image: url(../images/arrow-on.gif);
+}
+
+.carousel-component ul.carousel-list li a.columnav-error span {
+    background-image: url(../images/error.gif);
+    color: red;
+}
+
+.carousel-component ul.carousel-list li a span {
+    background-repeat: no-repeat;
+    background-position: 0px center;
+    margin-right: 14px;
+    padding-left: 20px;
+}
+
+.carousel-component ul.carousel-list li a.columnav-active span {
+    color: white;
+}
+
+.carousel-component ul.carousel-list li a.columnav-has-menu span {
+    background-image: url(../images/folder-off.gif);
+}
+
+/* IE6 cannot grok element selectors with chained class names */
+html>body .carousel-component ul.carousel-list li a.columnav-has-menu.columnav-active span {
+    background-image: url(../images/folder-on.gif);
+}
+
+.prevButton { }
+  .prevButton a {
+    color: black;
+    font-family: 'Lucida Grande', Helvetica, Arial;
+    font-size: 10px;
+    line-height: 22px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+
+.prevButton a:hover {
+    background-color: #3875d7;
+    color: white;
+}
